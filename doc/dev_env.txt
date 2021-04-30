@@ -1,0 +1,17 @@
+#gwan hyung env
+	- python 3.7.9 (include pip)
+	- win10 os + vs code
+	- git
+
+#pip install 
+	- SpeechRecognition
+	- PyAudio
+	- playsound
+#git
+	<upload>
+	- git add .
+	- git commit -m 'this_is_1st_commit'
+	- git push
+	
+	<download>
+	- git pull

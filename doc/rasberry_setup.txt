@@ -1,0 +1,19 @@
+#Hangul Setup
+	1. localisation 
+		- Language = Korean
+		- character set = UTF-8
+	2. wifi country : United states
+	3. $sudo apt-get install fonts-unfonts-core
+
+#pip install
+	- virtualenv 
+	- SpeechRecognition
+	- PyAudio
+	- playsound
+
+#virtualenv
+	- create : virtualenv audiobot --python=python3.7
+	- jump to audiobot
+		# cd audiobot
+		# source ./bin/Scripts/activate
+		
