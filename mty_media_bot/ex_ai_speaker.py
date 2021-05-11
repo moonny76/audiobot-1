@@ -25,7 +25,7 @@ msg = '명령하세요'
 Saying(msg)
 
 """Part 2 : Speech Recognition from Mic."""
-print(sr.Microphone.list_microphone_names())
+# print(sr.Microphone.list_microphone_names())
 mic = sr.Microphone(device_index=1) #'Microsoft ???? - Input'
 with mic as source:
     r.adjust_for_ambient_noise(source)

@@ -3,7 +3,7 @@ import yfinance as yf
 import numpy as np
 import speech_recognition as sr
 
-
+"""
 r = sr.Recognizer()
 print(sr.Microphone.list_microphone_names())
 
@@ -14,15 +14,16 @@ with mic as source:
 res = r.recognize_google(audio)
 # res = r.recognize_sphinx(audio)
 print('Result : ', res)
-
+"""
 """
 item_stock = yf.Ticker('TSLA')
 price = item_stock.history(period='1d')
 cur_price = np.round(price['Close'].iloc[-1],1)
 open_price = np.round(price['Open'].iloc[-1],1)
 text = '현재 Tesla 주가는 {}이며 시초가는 {} 였습니다.'.format(cur_price, open_price)
-
-tts = gTTS(text=text, lang='ko')
+"""
+text = '내일 날씨는 맑음 입니다'
+tts = gTTS(text=text, lang='ko-KR-Standard-A', slow=False)
 tts.save('hello.mp3')
 
 import pygame
@@ -44,4 +45,3 @@ clock = pygame.time.Clock()
 while pygame.mixer.music.get_busy():
     clock.tick(30)
 pygame.mixer.quit()    
-"""

@@ -16,4 +16,47 @@
 	- jump to audiobot
 		# cd audiobot
 		# source ./bin/Scripts/activate
-		
+
+#pyaudio
+$ sudo apt-get install git
+$ git clone http://people.csail.mit.edu/hubert/git/pyaudio.git
+$ sudo apt-get install libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev
+$ sudo apt-get python-dev
+$ sudo python pyaudio/setup.py install
+
+#Mic recording
+1. sudo apt install libatlas-base-dev
+2. sudo pip3 install pybind11
+3. pip3 install scipy
+  ** Mic dB test # arecord --device=hw:2,0 --format S16_LE --rate 44100 -V mono -c1 test.wav
+     sudo alsa force-reload     
+     sudo /etc/init.d/alsa-utils restart
+     sudo apt-get install pavucontrol
+     sudo pavucontrol
+
+
+#Wav file play
+ex) import os; os.system('aplay [file_name]')
+
+#TTS
+sudo apt install espeak
+pip3 install pyttsx3
+
+#ras3 Hangul setting
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install ibus ibus-hangul
+sudo apt-get install fonts-unfonts-core
+
+'Localisation' Setting
+lang=ko
+country=kr
+charset=utf-8
+
+[t-zone] asia / seoul
+[kbd] korea, republic, variant=korean(101/104 key)
+
+reboot!!
+
+
