@@ -1,6 +1,6 @@
-from gtts import gTTS
+#from gtts import gTTS
 import pyttsx3
-from selenium import webdriver
+from selenium import webdriver # python3 -m pip install selenium
 
 print('start')
 
@@ -21,3 +21,5 @@ def Saying(msg):
 for child in childs:
    print(child.text)
    Saying(child.text)
+
+driver.quit()
