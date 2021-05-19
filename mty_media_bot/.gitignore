@@ -1,3 +1,6 @@
-data/
-practice/
-resource/
+practice/*
+resource/database/*
+resource/log/*
+resource/music/*
+resource/voice/*
+!donotdelete.txt
