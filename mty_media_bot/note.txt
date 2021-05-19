@@ -1,0 +1,14 @@
+#window
+pip install pipwin
+pipwin install pyaudio
+
+#linux
+sudo apt-get install python3-pyaudio
+https://stackoverflow.com/questions/20023131/cannot-install-pyaudio-gcc-error
+https://www.geeksforgeeks.org/personal-voice-assistant-in-python/
+
+sudo apt-get install -y python-gobject
+https://askubuntu.com/questions/80448/what-would-cause-the-gi-module-to-be-missing-from-python
+
+pip install pydub
+https://statkclee.github.io/nlp2/nlp-audio-transcribe.html
