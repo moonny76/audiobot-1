@@ -32,7 +32,7 @@ class Bot:
             kr_text = stream_recognizer.recognize()
             self.speak(f"{kr_text} 라고")
             en_text = stream_recognizer.recognize(lang="en")
-            print(self.name, " recognized : ", kr_text, "/", en_text)
+            print(f'{self.name}, recognized : {kr_text} / {en_text}')
             return Word(kr_text, en_text)
         except Exception as e:
             print(e)

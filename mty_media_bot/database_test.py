@@ -9,7 +9,7 @@ class MusicTest(unittest.TestCase):
 
     def setUp(self) -> None:
         create_app()
-        self.filename = 'resource/music/Modern Talking.mp3'
+        self.filename = 'resource/music/Modern-Talking.mp3'
         update_music(self.filename)
         self.music_list = get_all_music()
         self.assertEqual(1, len(self.music_list))

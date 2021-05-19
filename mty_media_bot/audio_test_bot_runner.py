@@ -9,7 +9,8 @@ def setup_command(assistant, friend):
 
 
 word_list = [Word("유튜브에서 김광석 노래 찾아 줘", ""),
-             Word("김광석 노래 찾아 줘", "")]
+             Word("좋니 노래 찾아 줘", ""),
+             Word("밤편지 노래 찾아 줘", "")]
 
 
 def test_words(assistant):

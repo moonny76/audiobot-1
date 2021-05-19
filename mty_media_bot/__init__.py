@@ -1,5 +1,6 @@
 import os
 from mty_media_bot.assistant_config import Config
+from mty_media_bot.service.parser_music import update_database
 
 
 def create_app():
@@ -16,3 +17,4 @@ def create_app():
     db_url = Config.DB_URL + db_filepath
     DBManager.init(db_url, eval(Config.DB_LOG_FLAG))
     DBManager.init_db()
+    update_database()

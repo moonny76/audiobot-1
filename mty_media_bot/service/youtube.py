@@ -1,5 +1,7 @@
 from time import sleep
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webelement import WebElement
 from youtubesearchpython import *
 from selenium import webdriver
 
@@ -19,12 +21,12 @@ def show_json_indentation(text):
 
 
 def play_music_with_bot_studio(url, title):
-    from bot_studio.bot_studio import *
-    bot_studio = bot_studio()
-    youtube = bot_studio.youtube()
-    youtube.open("http://www.youtube.com/watch?v=LMmuChXra_M")
-    youtube.play_pause_video()
-    bot_studio.send_feedback(feedback="Need help with this ......")
+    import mpv
+    player = mpv.MPV(ytdl=True)
+    player.play(url)
+    player.wait_until_playing()
+    sleep(10)
+    player.stop()
 
 
 def play_music_with_webdriver(url, title):
@@ -32,24 +34,26 @@ def play_music_with_webdriver(url, title):
     driver.implicitly_wait(1)
     driver.maximize_window()
     driver.get(url)
-    on_clicked = False
-    trial = 3
-    while on_clicked or trial > 0:
+    driver.implicitly_wait(10)
+    trial = 10
+    while trial > 0:
         try:
             print(f"on_clicked : {url}, {title}")
             driver.implicitly_wait(2)
             element = driver.find_element_by_partial_link_text(title)
             driver.implicitly_wait(1)
             element.click()
-            on_clicked = True
+            driver.implicitly_wait(10)
         except Exception as e:
             print("try again!", e)
+        finally:
             trial -= 1
 
 
 def open_url(url, title):
     print(f"open_url : {url}, {title}")
-    play_music_with_webdriver(url, title)
+    # play_music_with_webdriver(url, title)
+    play_music_with_bot_studio(url, title)
 
 
 def search_video(query):

@@ -9,3 +9,5 @@ class Config(object):
     LOG_FILE_PATH = 'resource/log/assistant.log'
     #: 디폴트 SQLAlchemy trace log 설정
     DB_LOG_FLAG = 'True'
+    #
+    MUSIC_ROOT_PATH = '/home/taeyong/Workspace/python/project/audiobot-1/mty_media_bot/resource/music'

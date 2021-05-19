@@ -44,4 +44,4 @@ class SearchCommand(Command):
         search_music(word.korean_word)
 
     def get_word(self):
-        return ["search", "find", "검색", "찾기", "찾아 줘"]
+        return ["search", "find", "검색", "찾기", "노래 찾아 줘"]

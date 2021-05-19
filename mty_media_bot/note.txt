@@ -12,3 +12,9 @@ https://askubuntu.com/questions/80448/what-would-cause-the-gi-module-to-be-missi
 
 pip install pydub
 https://statkclee.github.io/nlp2/nlp-audio-transcribe.html
+
+pip install python-mpv
+sudo apt-get install -y libmpv-dev
+pip3 install mps-youtube
+pip install mps-youtube
+https://github.com/jaseg/python-mpv
